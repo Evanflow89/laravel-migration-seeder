@@ -24,8 +24,8 @@ class CreateTrainsTable extends Migration
             $table->unsignedSmallInteger('codice_treno');
             $table->unsignedTinyInteger('num_carrozze');
             $table->float('prezzo_biglietto', 2, 2);
-            $table->boolean('in_orario');
-            $table->boolean('cancellato');
+            $table->boolean('in_orario')->default(true);
+            $table->boolean('cancellato')->default(false);
             $table->timestamps();
         });
     }
