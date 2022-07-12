@@ -13,6 +13,9 @@ class trainsTableSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
+
+        for($i = 0; $i < 100; $i++) {
+
         $newTrain = new Train();
         $newTrain->azienda = $faker->word();
         $newTrain->stazione_di_partenza = $faker->city();
@@ -22,7 +25,8 @@ class trainsTableSeeder extends Seeder
         $newTrain->orario_arrivo = $faker->time();
         $newTrain->codice_treno = rand(1000,9999);
         $newTrain->num_carrozze = rand(1,20);
-        $newTrain->prezzo_biglietto = rand(1,99);
+        $newTrain->prezzo_biglietto = rand(1,120);
         $newTrain->save();
+        }
     }
 }
