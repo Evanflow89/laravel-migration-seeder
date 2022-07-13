@@ -12,4 +12,13 @@ class TrainController extends Controller
         $trains = Train::where('data_partenza', date('Y-m-d'))->get();
 return view('home', compact('trains'));
     }
+
+    public function show($id)
+    {
+        $train = Train::findOrFail($id);
+
+        return view('show', compact('train'));
+
+    
+    }
 }

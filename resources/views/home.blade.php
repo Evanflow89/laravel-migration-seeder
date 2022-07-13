@@ -21,7 +21,7 @@
     <tbody>
      @foreach ($trains as $train)
          <tr>
-            <td>{{$train->codice_treno}}</td>
+            <td><a href="{{route('show', $train->id)}}">{{$train->codice_treno}}</a></td>
             <td>{{$train->stazione_di_partenza}}</td>
             <td>{{$train->stazione_di_arrivo}}</td>
             <td>{{$train->orario_partenza}}</td>
