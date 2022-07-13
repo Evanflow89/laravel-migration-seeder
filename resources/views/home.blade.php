@@ -5,5 +5,7 @@
 @endsection
 
 @section('page-content')
-    @dump($trains)
+<div class="container">
+    <h1 class="pt-3">Lista Treni in Partenza:</h1>
+</div>
 @endsection
