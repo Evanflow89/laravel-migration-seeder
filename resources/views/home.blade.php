@@ -26,8 +26,8 @@
             <td>{{$train->stazione_di_arrivo}}</td>
             <td>{{$train->orario_partenza}}</td>
             <td>{{$train->orario_arrivo}}</td>
-            <td>{{$train->in_orario}}</td>
-            <td>{{$train->cancellato}}</td>
+            <td>{{$train->in_orario ? "Si" : "No"}}</td>
+            <td>{{$train->cancellato ? "Si" : "No"}}</td>
          </tr>
      @endforeach
     </tbody>
